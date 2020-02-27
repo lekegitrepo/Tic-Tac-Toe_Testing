@@ -1,11 +1,24 @@
 const { gameBoard, player, gameManager } = require('./tic-tac-toe');
 
-it('setBoardTile function set tile position on game board', () => {
-  expect(gameBoard.setBoardTile(0, 'X')).toBe(gameBoard.board['X', '', '', '', '', '', '', '', '']);
+describe('game board', () => {
+  it('setBoardTile function set tile position on game board', () => {
+    expect(gameBoard.setBoardTile(0, 'X')).toBe(gameBoard.board['X', '', '', '', '', '', '', '', '']);
+  });
+
+  it('reset game board', () => {
+    expect(gameBoard.resetBoard()).toBe(gameBoard.board['', '', '', '', '', '', '', '', '']);
+  });
 });
 
-it('reset game board', () => {
-  expect(gameBoard.resetBoard()).toBe(gameBoard.board['', '', '', '', '', '', '', '', '']);
+describe('game winning patterns', () => {
+  beforeEach(() => gameBoard.resetBoard());
+
+  it('check first row for win pattern on the game board', () => {
+    gameBoard.setBoardTile(0, 'X');
+    gameBoard.setBoardTile(1, 'X');
+    gameBoard.setBoardTile(2, 'X');
+    expect(gameBoard.checkRows()).toBe('X');
+  });
 });
 
 describe('Players', () => {
