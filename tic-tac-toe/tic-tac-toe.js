@@ -40,9 +40,19 @@ const gameManager = (player1, player2) => {
     return currentPlayer;
   };
 
+  const winner = winToken => {
+    if (winToken) {
+      if (winToken == player1.token) {
+        return player1;
+      } if (winToken == player2.token) {
+        return player2;
+      }
+    }
+  };
+
   const getCurrentPlayer = () => currentPlayer;
 
-  return { getCurrentPlayer, roundSelector };
+  return { getCurrentPlayer, winner, roundSelector };
 };
 
 module.exports = { gameBoard, player, gameManager };
