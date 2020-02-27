@@ -32,4 +32,17 @@ const player = (name, token) => {
   return { name, token, score };
 };
 
-module.exports = { gameBoard, player };
+const gameManager = (player1, player2) => {
+  let currentPlayer = player1;
+
+  const roundSelector = () => {
+    currentPlayer = currentPlayer === player1 ? player2 : player1;
+    return currentPlayer;
+  };
+
+  const getCurrentPlayer = () => currentPlayer;
+
+  return { getCurrentPlayer, roundSelector };
+};
+
+module.exports = { gameBoard, player, gameManager };
