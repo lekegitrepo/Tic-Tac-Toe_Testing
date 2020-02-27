@@ -4,7 +4,8 @@
   "description": "> Using jest to test Tic-Tac-Toe project we built in JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "jest --watch"
   },
   "repository": {
     "type": "git",
