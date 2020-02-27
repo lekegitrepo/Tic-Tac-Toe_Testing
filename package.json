@@ -1,0 +1,28 @@
+{
+  "name": "Tic-Tac-Toe_Testing",
+  "version": "1.0.0",
+  "description": "> Using jest to test Tic-Tac-Toe project we built in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lekegitrepo/Tic-Tac-Toe_Testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lekegitrepo/Tic-Tac-Toe_Testing/issues"
+  },
+  "homepage": "https://github.com/lekegitrepo/Tic-Tac-Toe_Testing#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
