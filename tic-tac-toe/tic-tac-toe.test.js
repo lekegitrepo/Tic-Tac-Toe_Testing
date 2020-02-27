@@ -36,4 +36,9 @@ describe('GameManager', () => {
   it('round selector', () => {
     expect(gm.roundSelector()).toBe(playerB);
   });
+
+  it('game winner', () => {
+    expect(gm.winner('X')).toBe(playerA);
+    expect(gm.winner('O')).toBe(playerB);
+  });
 });
