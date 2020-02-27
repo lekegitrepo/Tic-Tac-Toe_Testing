@@ -27,4 +27,9 @@ const gameBoard = (() => {
   };
 })();
 
-module.exports = { gameBoard };
+const player = (name, token) => {
+  const score = 0;
+  return { name, token, score };
+};
+
+module.exports = { gameBoard, player };

@@ -1,4 +1,4 @@
-const { gameBoard } = require('./tic-tac-toe');
+const { gameBoard, player } = require('./tic-tac-toe');
 
 it('setBoardTile function set tile position on game board', () => {
   expect(gameBoard.setBoardTile(0, 'X')).toBe(gameBoard.board['X', '', '', '', '', '', '', '', '']);
@@ -12,12 +12,14 @@ describe('Players', () => {
   it('playerA', () => {
     const playerX = player('playerA', 'X');
     expect(playerX.name).toBe('playerA');
-    expect(player.score).toBe(0);
+    expect(playerX.token).toBe('X');
+    expect(playerX.score).toBe(0);
   });
 
   it('playerB', () => {
     const playerO = player('playerB', 'O');
     expect(playerO.name).toBe('playerB');
-    expect(player.score).toBe(0);
+    expect(playerO.token).toBe('O');
+    expect(playerO.score).toBe(0);
   });
 });
