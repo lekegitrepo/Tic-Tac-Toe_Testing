@@ -1,9 +1,10 @@
+/* eslint-disable no-sequences */
 /* eslint-disable prefer-destructuring */
 const gameBoard = (() => {
   const arrayTiles = ['', '', '', '', '', '', '', '', ''];
 
   const setBoardTile = (index, value) => {
-    if (arrayTiles[index] == '') {
+    if (arrayTiles[index] === '') {
       arrayTiles[index] = value;
     }
   };
@@ -91,13 +92,15 @@ const gameManager = (player1, player2) => {
   };
 
   const winner = winToken => {
+    let player;
     if (winToken) {
-      if (winToken == player1.token) {
-        return player1;
-      } if (winToken == player2.token) {
-        return player2;
+      if (winToken === player1.token) {
+        player = player1;
+      } if (winToken === player2.token) {
+        player = player2;
       }
     }
+    return player;
   };
 
   const getCurrentPlayer = () => currentPlayer;

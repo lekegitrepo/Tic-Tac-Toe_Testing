@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 const { gameBoard, player, gameManager } = require('./tic-tac-toe');
 
 describe('game board', () => {
