@@ -51,13 +51,18 @@ describe('game winning patterns', () => {
     expect(gameBoard.checkDiagonals(diagonalSecond)).toBe('X');
   });
 
-//  it('check for draw', () =>{
-//   gameBoard.arrayTiles['O', 'X', 'X', 
-//                        'X', 'O', 'O', 
-//                        'X', 'O', 'X']
-//   expect(gameBoard.checkWinPattern()).toBe(false);
-//  })
-
+  it('check for draw', () => {
+    let checkDraw = false;
+    const pattern = ['O', 'X', 'X', 'X', 'O', 'O', 'X', 'O', 'X'];
+    if (gameBoard.checkDiagonals(pattern)) {
+      checkDraw = gameBoard.checkWinPattern();
+    } else if (gameBoard.checkRows(pattern)) {
+      checkDraw = gameBoard.checkWinPattern();
+    } else if (gameBoard.checkColumns(pattern)) {
+      checkDraw = gameBoard.checkWinPattern();
+    }
+    expect(checkDraw).toBe(false);
+  });
 });
 
 describe('Players', () => {
@@ -93,6 +98,4 @@ describe('GameManager', () => {
     expect(gm.winner('X')).toBe(playerA);
     expect(gm.winner('O')).toBe(playerB);
   });
-
-
 });
