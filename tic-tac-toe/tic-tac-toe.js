@@ -23,7 +23,21 @@ const gameBoard = (() => {
     return rows;
   };
 
-  
+  const checkColumns = (board = arrayTiles) => {
+    let columns = false;
+    if ((board[0] !== '') &&
+      (board[0] === board[3] && board[0] === board[6])) {
+      columns = board[0];
+    } else if ((board[1] !== '') &&
+      (board[1] === board[4] && board[1] === board[7])) {
+      columns = board[1];
+    } else if ((board[2] !== '') &&
+      (board[2] === board[5] && board[2] === board[8])) {
+      columns = board[2];
+    }
+    return columns;
+  };
+
 
   const resetBoard = () => (arrayTiles['', '', '', '', '', '', '', '', '']);
 
@@ -32,6 +46,7 @@ const gameBoard = (() => {
     setBoardTile,
     checkRows,
     resetBoard,
+    checkColumns,
   };
 })();
 

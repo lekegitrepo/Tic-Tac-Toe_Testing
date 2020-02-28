@@ -31,6 +31,20 @@ describe('game winning patterns', () => {
     expect(gameBoard.checkColumns(colFirst)).toBe('X');
   });
 
+  it('check second column for win pattern on the game board', () => {
+    const colSecond = ['', 'O', '', '', 'O', '', '', 'O', ''];
+    expect(gameBoard.checkColumns(colSecond)).toBe('O');
+  });
+
+  it('check third column for win pattern on the game board', () => {
+    const colThree = ['', '', 'X', '', '', 'X', '', '', 'X'];
+    expect(gameBoard.checkColumns(colThree)).toBe('X');
+  });
+
+  it('check for first diagonal win pattern on the game board', () => {
+    const diagonalFirst = ['O', '', '', 'O', '', '', '', '', 'O'];
+    expect(gameBoard.checkDiagonal(diagonalFirst)).toBe('O');
+  });
 });
 
 describe('Players', () => {
@@ -66,4 +80,6 @@ describe('GameManager', () => {
     expect(gm.winner('X')).toBe(playerA);
     expect(gm.winner('O')).toBe(playerB);
   });
+
+
 });
