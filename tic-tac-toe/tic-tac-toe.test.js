@@ -2,22 +2,28 @@ const { gameBoard, player, gameManager } = require('./tic-tac-toe');
 
 describe('game board', () => {
   it('setBoardTile function set tile position on game board', () => {
-    expect(gameBoard.setBoardTile(0, 'X')).toBe(gameBoard.board['X', '', '', '', '', '', '', '', '']);
+    expect(gameBoard.setBoardTile(0, 'X')).toBe(gameBoard.arrayTiles['X', '', '', '', '', '', '', '', '']);
   });
 
   it('reset game board', () => {
-    expect(gameBoard.resetBoard()).toBe(gameBoard.board['', '', '', '', '', '', '', '', '']);
+    expect(gameBoard.resetBoard()).toBe(gameBoard.arrayTiles['', '', '', '', '', '', '', '', '']);
   });
 });
 
 describe('game winning patterns', () => {
-  beforeEach(() => gameBoard.resetBoard());
-
   it('check first row for win pattern on the game board', () => {
-    gameBoard.setBoardTile(0, 'X');
-    gameBoard.setBoardTile(1, 'X');
-    gameBoard.setBoardTile(2, 'X');
-    expect(gameBoard.checkRows()).toBe('X');
+    const rowOne = ['X', 'X', 'X', '', '', '', '', '', ''];
+    expect(gameBoard.checkRows(rowOne)).toBe('X');
+  });
+
+  it('check second row for win pattern on the game board', () => {
+    const rowTwo = ['', '', '', 'O', 'O', 'O', '', '', ''];
+    expect(gameBoard.checkRows(rowTwo)).toBe('O');
+  });
+
+  it('check third row for win pattern on the game board', () => {
+    const rowThree = ['', '', '', '', '', '', 'X', 'X', 'X'];
+    expect(gameBoard.checkRows(rowThree)).toBe('X');
   });
 });
 
