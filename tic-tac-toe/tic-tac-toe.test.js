@@ -50,6 +50,14 @@ describe('game winning patterns', () => {
     const diagonalSecond = ['', '', 'X', '', 'X', '', 'X', '', ''];
     expect(gameBoard.checkDiagonals(diagonalSecond)).toBe('X');
   });
+
+//  it('check for draw', () =>{
+//   gameBoard.arrayTiles['O', 'X', 'X', 
+//                        'X', 'O', 'O', 
+//                        'X', 'O', 'X']
+//   expect(gameBoard.checkWinPattern()).toBe(false);
+//  })
+
 });
 
 describe('Players', () => {
