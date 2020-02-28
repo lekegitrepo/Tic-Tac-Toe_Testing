@@ -45,6 +45,11 @@ describe('game winning patterns', () => {
     const diagonalFirst = ['O', '', '', '', 'O', '', '', '', 'O'];
     expect(gameBoard.checkDiagonals(diagonalFirst)).toBe('O');
   });
+
+  it('check for second diagonal win pattern on the game board', () => {
+    const diagonalSecond = ['', '', 'X', '', 'X', '', 'X', '', ''];
+    expect(gameBoard.checkDiagonals(diagonalSecond)).toBe('X');
+  });
 });
 
 describe('Players', () => {
