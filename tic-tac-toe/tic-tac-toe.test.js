@@ -42,8 +42,8 @@ describe('game winning patterns', () => {
   });
 
   it('check for first diagonal win pattern on the game board', () => {
-    const diagonalFirst = ['O', '', '', 'O', '', '', '', '', 'O'];
-    expect(gameBoard.checkDiagonal(diagonalFirst)).toBe('O');
+    const diagonalFirst = ['O', '', '', '', 'O', '', '', '', 'O'];
+    expect(gameBoard.checkDiagonals(diagonalFirst)).toBe('O');
   });
 });
 

@@ -38,6 +38,17 @@ const gameBoard = (() => {
     return columns;
   };
 
+  const checkDiagonals = (board = arrayTiles) => {
+    let diagonal = false;
+    if ((board[0] !== '') &&
+      (board[0] === board[4] && board[0] === board[8])) {
+      diagonal = board[0];
+    } else if ((board[2] !== '') &&
+      (board[2] === board[4] && board[2] === board[6])) {
+      diagonal = board[2];
+    }
+    return diagonal;
+  };
 
   const resetBoard = () => (arrayTiles['', '', '', '', '', '', '', '', '']);
 
@@ -47,6 +58,7 @@ const gameBoard = (() => {
     checkRows,
     resetBoard,
     checkColumns,
+    checkDiagonals,
   };
 })();
 
