@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-sequences */
 /* eslint-disable prefer-destructuring */
 const gameBoard = (() => {
@@ -125,6 +126,8 @@ const boardTiles = document.getElementById('board-game');
 
 const startBtn = document.getElementById('start-game');
 const resetGameBtn = document.getElementById('resetGame');
+
+const winner = document.getElementById('winner');
 
 function resetGame() {
   const tiles = document.getElementsByClassName('board-tile');
