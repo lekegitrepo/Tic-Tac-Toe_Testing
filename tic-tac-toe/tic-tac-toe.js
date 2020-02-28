@@ -23,6 +23,8 @@ const gameBoard = (() => {
     return rows;
   };
 
+  
+
   const resetBoard = () => (arrayTiles['', '', '', '', '', '', '', '', '']);
 
   return {

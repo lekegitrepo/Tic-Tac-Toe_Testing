@@ -25,6 +25,12 @@ describe('game winning patterns', () => {
     const rowThree = ['', '', '', '', '', '', 'X', 'X', 'X'];
     expect(gameBoard.checkRows(rowThree)).toBe('X');
   });
+
+  it('check first column for win pattern on the game board', () => {
+    const colFirst = ['X', '', '', 'X', '', '', 'X', '', ''];
+    expect(gameBoard.checkColumns(colFirst)).toBe('X');
+  });
+
 });
 
 describe('Players', () => {
