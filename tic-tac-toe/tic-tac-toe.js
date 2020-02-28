@@ -164,7 +164,6 @@ function winnerMessage(mssg) {
   }, 3000);
 }
 
-
 function initializePlay() {
   const display = displayPlayerName();
   playersName(display.playerX().name, display.playerO().name);
