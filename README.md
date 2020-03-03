@@ -7,10 +7,6 @@
 -   Javascript,
 -   Webpack
 
-## Live Demo
-
-[Live Demo Link]()
-
 ## Installation
 
 1. Clone the repository in your local folder.
